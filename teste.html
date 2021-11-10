@@ -4,27 +4,25 @@
     <meta charset="utf-8">
     <title>OOP Vending Machine</title>
     <link href="machine.css" rel="stylesheet">
-
+    <script src="teste.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="page-wrap">
         <div class="vend-container">
             <div class="vend-outer">
-                <div class="return-box" id="return">
-
-                </div>
                 <div class="pay-box" id="pay">0</div>
                 <div class="coin-box">
-                    <div class="coin-outter" id="five">
+                    <div class="coin-outter" id="one">
                         <p class="coin" id="1">1</p>
                     </div>
                     &nbsp;
-                    <div class="coin-outter" id="ten">
+                    <div class="coin-outter" id="two">
                         <p class="coin">2</p>
                     </div>
                     &nbsp;
-                    <div class="coin-outter" id="twentyFive">
+                    <div class="coin-outter" id="five">
                         <p class="coin">5</p>
                     </div>
 
@@ -35,23 +33,11 @@
                     <div class="product-row">
                         <div class="soda-box pepsi-box" id="pepsiBox">
                             <div class="soda pepsi">
-                                <p class="soda-text">pepsi</p>
-                            </div>
-                            <div class="soda pepsi">
-                                <p class="soda-text">pepsi</p>
-                            </div>
-                            <div class="soda pepsi">
-                                <p class="soda-text">pepsi</p>
-                            </div>
-                            <div class="soda pepsi">
-                                <p class="soda-text">pepsi</p>
-                            </div>
-                            <div class="soda pepsi">
-                                <p class="soda-text">pepsi</p>
+                                <p class="soda-text">A</p>
                             </div>
                         </div>
                         <div class="price-box pepsi-price">
-                            <p>.10</p>
+                            <p>6,00</p>
                         </div>
                         <div class="tag tag-one">
                             <p>A1</p>
@@ -88,23 +74,11 @@
                     <div class="product-row">
                         <div class="soda-box coke-box" id="cokeBox">
                             <div class="soda coke">
-                                <p class="soda-text">coke</p>
-                            </div>
-                            <div class="soda coke">
-                                <p class="soda-text">coke</p>
-                            </div>
-                            <div class="soda coke">
-                                <p class="soda-text">coke</p>
-                            </div>
-                            <div class="soda coke">
-                                <p class="soda-text">coke</p>
-                            </div>
-                            <div class="soda coke">
-                                <p class="soda-text">coke</p>
+                                <p class="soda-text">B</p>
                             </div>
                         </div>
                         <div class="price-box coke-price">
-                            <p>.50</p>
+                            <p>7,00</p>
                         </div>
                         <div class="tag tag-two">
                             <p>B3</p>
@@ -141,23 +115,11 @@
                     <div class="product-row">
                         <div class="soda-box sprite-box" id="spriteBox">
                             <div class="soda sprite">
-                                <p class="soda-text">sprite</p>
-                            </div>
-                            <div class="soda sprite">
-                                <p class="soda-text">sprite</p>
-                            </div>
-                            <div class="soda sprite">
-                                <p class="soda-text">sprite</p>
-                            </div>
-                            <div class="soda sprite">
-                                <p class="soda-text">sprite</p>
-                            </div>
-                            <div class="soda sprite">
-                                <p class="soda-text">sprite</p>
+                                <p class="soda-text">C</p>
                             </div>
                         </div>
                         <div class="price-box sprite-price">
-                            <p>.50</p>
+                            <p style="margin-right: -5px;">8,00</p>
                         </div>
                         <div class="tag tag-three">
                             <p>C4</p>
@@ -192,16 +154,12 @@
                         </div>
                     </div>
                     <div class="product-row">
-                        <div class="soda-box fanta-box" id="fantaBox">
-                            <div class="soda fanta" id="fanta">
-                                <p class="soda-text">Fanta</p>
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
                             </div>
-                        </div>
-                        <div class="price-box fanta-price">
-                            <p>.25</p>
-                        </div>
-                        <div class="tag tag-four">
-                            <p>D2</p>
                         </div>
                         <div class="spiral">
                             <div class="inner-spiral">
@@ -266,26 +224,75 @@
                 </div>
 
                 <div class="touch-pad">
-                    <div class="button">
+                    <div class="button" id="A">
                         <p>A1</p>
                     </div>
-                    <div class="button">
+                    <div class="button" id="B">
                         <p>B3</p>
                     </div>
-                    <div class="button">
+                    <div class="button" id="C">
                         <p>C4</p>
                     </div>
                     <div>
                         <p></p>
                     </div>
                 </div>
-                <div class="grab-box">
-
+                <div class="grab-box-2" id="troco">
+                    0
+                </div>
+                <div class="grab-box" id="grab-box">
                 </div>
             </div>
         </div>
     </div>
 
 </body>
+<script>
+    $("#one").click(function () {
+        var pay = parseInt($("#pay").text()) + 1;
+        $("#pay").text(pay);
+    });
+    $("#two").click(function () {
+        var pay = parseInt($("#pay").text()) + 2;
+        $("#pay").text(pay);
+    });
+    $("#five").click(function () {
+        var pay = parseInt($("#pay").text()) + 5;
+        $("#pay").text(pay);
+    });
+
+
+    $("#A").click(function () {
+        if (parseInt($("#pay").text()) >= 6) {
+            var pay = parseInt($("#pay").text()) - 6;
+            $("#pay").text(0);
+            $("#troco").text(pay);
+            $("#grab-box").append("<div class='soda pepsi'><p class='soda-text'>A</p></div>");
+        }
+    });
+
+    $("#B").click(function () {
+        if (parseInt($("#pay").text()) >= 7) {
+            var pay = parseInt($("#pay").text()) - 7;
+            $("#pay").text(0);
+            $("#troco").text(pay);
+
+        }
+    });
+
+    $("#C").click(function () {
+        if (parseInt($("#pay").text()) >= 8) {
+            var pay = parseInt($("#pay").text()) - 8;
+            $("#pay").text(0);
+            $("#troco").text(pay);
+        }
+    });
+
+    $("#troco").click(function () {
+        $("#troco").text(0);
+    });
+
+
+</script>
 
 </html>
