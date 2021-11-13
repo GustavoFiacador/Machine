@@ -1,12 +1,371 @@
+<html>
+
 <head>
-    <link rel="stylesheet" href="index.css">
+    <meta charset="utf-8">
+    <title>OOP Vending Machine</title>
+    <link href="index.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
-
 <body>
-    <div id="quadrado">
+    <div class="page-wrap">
+        <div class="vend-container">
+            <div class="vend-outer">
+                <div class="pay-box" id="pay">0</div>
+                <div class="coin-box">
+                    <div class="coin-outter" id="one">
+                        <p class="coin" id="1">1</p>
+                    </div>
+                    &nbsp;
+                    <div class="coin-outter" id="two">
+                        <p class="coin">2</p>
+                    </div>
+                    &nbsp;
+                    <div class="coin-outter" id="five">
+                        <p class="coin">5</p>
+                    </div>
 
+                </div>
+
+                <br>
+                <div class="vend-back">
+                    <div class="product-row">
+                        <div class="soda-box a-box" id="a">
+                            <div class="soda a">
+                                <p class="soda-text">A</p>
+                            </div>
+                        </div>
+                        <div class="price-box a-price">
+                            <p>6,00</p>
+                        </div>
+                        <div class="tag tag-one">
+                            <p>A1</p>
+                        </div>
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-row">
+                        <div class="soda-box b-box" id="b">
+                            <div class="soda b">
+                                <p class="soda-text">B</p>
+                            </div>
+                        </div>
+                        <div class="price-box b-price">
+                            <p>7,00</p>
+                        </div>
+                        <div class="tag tag-two">
+                            <p>B3</p>
+                        </div>
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-row">
+                        <div class="soda-box c-box" id="c">
+                            <div class="soda c">
+                                <p class="soda-text">C</p>
+                            </div>
+                        </div>
+                        <div class="price-box c-price">
+                            <p style="margin-right: -5px;">8,00</p>
+                        </div>
+                        <div class="tag tag-three">
+                            <p>C4</p>
+                        </div>
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-row">
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-row">
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spiral">
+                            <div class="inner-spiral">
+                                <div class="inner-spiral">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vend-glass"></div>
+                </div>
+
+                <div class="touch-pad">
+                    <div class="button" id="A">
+                        <p>A1</p>
+                    </div>
+                    <div class="button" id="B">
+                        <p>B3</p>
+                    </div>
+                    <div class="button" id="C">
+                        <p>C4</p>
+                    </div>
+                    <div>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="grab-box-2" id="troco">
+                    0
+                </div>
+                <div class="grab-box" id="grab-box">
+                </div>
+            </div>
+        </div>
     </div>
 
-
 </body>
+<script>
+
+    var productosComprados = 0;
+
+    $("#one").click(function () {
+        var pay = parseInt($("#pay").text()) + 1;
+        $("#pay").text(pay);
+
+
+        if (pay >= 6) {
+            $("#A").css("background-color", "green");
+        }
+        if (pay >= 7) {
+            $("#B").css("background-color", "green");
+        }
+        if (pay >= 8) {
+            $("#C").css("background-color", "green");
+        }
+    });
+    $("#two").click(function () {
+        var pay = parseInt($("#pay").text()) + 2;
+        $("#pay").text(pay);
+
+        if (pay >= 6) {
+            $("#A").css("background-color", "green");
+        }
+        if (pay >= 7) {
+            $("#B").css("background-color", "green");
+        }
+        if (pay >= 8) {
+            $("#C").css("background-color", "green");
+        }
+    });
+    $("#five").click(function () {
+        var pay = parseInt($("#pay").text()) + 5;
+        $("#pay").text(pay);
+
+        if (pay >= 6) {
+            $("#A").css("background-color", "green");
+        }
+        if (pay >= 7) {
+            $("#B").css("background-color", "green");
+        }
+        if (pay >= 8) {
+            $("#C").css("background-color", "green");
+        }
+    });
+
+
+    $("#A").click(function () {
+        if (parseInt($("#pay").text()) >= 6) {
+            productosComprados++;
+            var pay = parseInt($("#pay").text()) - 6;
+            $("#A").css("background-color", "#333");
+
+            $("#pay").text(0);
+            $("#troco").text(pay + parseInt($("#troco").text()));
+            $("#grab-box").append("<div class='soda a' id='product" + productosComprados + "' ><p class='soda-text'>A</p></div>");
+
+
+            $("#A").css("background-color", "#333");
+            $("#B").css("background-color", "#333");
+            $("#C").css("background-color", "#333");
+        }
+    });
+
+    $("#B").click(function () {
+        if (parseInt($("#pay").text()) >= 7) {
+            productosComprados++;
+
+            $("#B").css("background-color", "#333");
+
+            var pay = parseInt($("#pay").text()) - 7;
+            $("#pay").text(0);
+            $("#troco").text(pay + parseInt($("#troco").text()));
+
+            $("#grab-box").append("<div class='soda b' id='product" + productosComprados + "'><p class='soda-text'>B</p></div>");
+
+
+            $("#A").css("background-color", "#333");
+            $("#B").css("background-color", "#333");
+            $("#C").css("background-color", "#333");
+
+        }
+    });
+
+    $("#C").click(function () {
+        if (parseInt($("#pay").text()) >= 8) {
+            productosComprados++;
+
+            $("#C").css("background-color", "#333");
+
+            var pay = parseInt($("#pay").text()) - 8;
+            $("#pay").text(0);
+            $("#troco").text(pay + parseInt($("#troco").text()));
+
+            $("#grab-box").append("<div class='soda c' id='product" + productosComprados + "'><p class='soda-text'>C</p></div>");
+
+
+            $("#A").css("background-color", "#333");
+            $("#B").css("background-color", "#333");
+            $("#C").css("background-color", "#333");
+
+        }
+    });
+
+    $("#troco").click(function () {
+        $("#troco").text(0);
+    });
+
+    $("#grab-box").click(function () {
+
+        if (productosComprados > 0) {
+            var product = "#product" + productosComprados;
+            $(product).remove();
+            productosComprados--;
+        }
+
+    });
+
+</script>
+
+</html>
